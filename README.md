@@ -80,7 +80,6 @@ Interpretation:
 - **Zero delay** = delivered on time
 - **Positive delay** = delivered late
 
-> ⚠️ Important: Keep the delay definition consistent across notebooks so the interpretation (early vs late) remains correct.
 
 ### Delivery Status Rules
 Each shipment is classified as:
@@ -123,15 +122,15 @@ The workflow follows a standard analytics pipeline:
 The analysis is organized into multiple notebooks, each answering a specific business question.
 For best understanding, notebooks should be read in the following order:
 
-1. [Data Preparation](data-preparation)
-2. [Overall Delivery Performance](overall-delivery-performance)
-3. [Shipment Mode Impact](shipment-mode-impact)
+1. [Data Preparation](#data-preparation)
+2. [Overall Delivery Performance](#overall-delivery-performance)
+3. [Shipment Mode Impact](#shipment-mode-impact)
 4. Country & Vendor Performance
 5. Cost Impact & Product Risk
 6. Final Conclusions & Recommendations
 ---
 
-# 1- Data Preparation
+# Data Preparation
 
 ```python
 import ast
@@ -161,7 +160,7 @@ for col in list_to_date:
 View my notebook with detailed steps here: [Data Preparation](<Notebooks/Data Preparation.ipynb>).
 
 
-# 2- Overall Delivery Performance
+# Overall Delivery Performance
 
 ## To what extent do shipment delays occur ?
 This analysis examines delivery timing across all shipments to determine how often delays occur and how severe they are. By comparing scheduled delivery dates with actual delivery dates, the study identifies patterns in early, on-time, and late deliveries. The results provide a baseline understanding of overall delivery reliability and highlight whether shipment delays represent isolated incidents or a recurring operational issue.
@@ -220,7 +219,7 @@ plt.show()
 - A **significant 27.3% of shipments are late**, representing a material service gap with cost and customer impact.  
 - **Reducing late deliveries** would deliver the greatest improvement in overall service reliability and efficiency.
 
-# 2- Shipment Mode Impact
+# Shipment Mode Impact
 
 ## Which shipment modes cause the longest delays?
 
